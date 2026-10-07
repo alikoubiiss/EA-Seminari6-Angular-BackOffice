@@ -55,7 +55,8 @@ export class BooksList implements OnInit {
       (book) => 
         book.title.toLowerCase().includes(text) || 
         book.isbn.toLowerCase().includes(text) ||
-        (book.description && book.description.toLowerCase().includes(text))
+        (book.description && book.description.toLowerCase().includes(text)) ||
+        (book.publisher && book.publisher.toLowerCase().includes(text))
     );
   });
 
